@@ -2,28 +2,56 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: "Source Sans 3", sans-serif;
 }
 /* Mobile devices */
 @media (max-width: 480px){
+    .container {
+        width: 100vw;
+    }
+    nav,
+    .logo,
+    nav > ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.5em;
+    }
+    .logo {
+        gap: 0.25em;
+    }
+    .logo-img {
+        width: 30px;
+        height: fit-content;
+    }
+    .logo > h1 {
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+    }
+    ul li {
+        list-style: none;
+    }
+    li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #090909;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    nav ul {
+        gap: 2em;
+    }
 
 }
 
 /* iPads, Tablets */
-@media (min-width: 481px) and (max-width: 768px){
-
-}
+@media (min-width: 481px) and (max-width: 768px) {}
 
 /* Small screens, laptops*/
-@media (min-width: 769px) and (max-width: 1024px) {
-    
-}
+@media (min-width: 769px) and (max-width: 1024px) {}
 
 /* Desktops, large screens */
-@media (min-width: 1025px) and (max-width: 1200px) {
-
-}
+@media (min-width: 1025px) and (max-width: 1200px) {}
 
 /* Extra larger screens, TV */
-@media (min-width: 1201px) {
-    
-}
+@media (min-width: 1201px) {}
