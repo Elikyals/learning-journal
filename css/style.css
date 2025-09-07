@@ -8,6 +8,7 @@ body {
 @media (max-width: 480px){
     .container {
         width: 100vw;
+        
     }
     nav,
     .logo,
@@ -40,6 +41,28 @@ body {
     }
     nav ul {
         gap: 2em;
+    }
+    .hero {
+        background-image: url('../images/main-blog-flipped.png');
+        height: 250px;
+        background-size: cover;
+        background-position: bottom;
+        color: white;
+        padding: 5em 1em 1em 1em;
+        
+    }
+    .hero h2 {
+        font-size: 2rem;
+        line-height: 1em;
+        margin: 0;
+    }
+    .date {
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+    .hero p {
+        font-size: 1rem;
+        font-weight: 400;
     }
 
 }
