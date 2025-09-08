@@ -64,7 +64,51 @@ body {
         font-size: 1rem;
         font-weight: 400;
     }
-
+    .blog-post {
+        padding: 0 1.5em;
+    }
+    article {
+        padding-top: 2.5em;
+        padding-bottom: 0.5em;
+    }
+    article img {
+        width: 100%;
+    }
+    article p {
+        font-weight: 400;
+        font-size: 1rem;
+        margin: 0;
+    }
+    article h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+    .view-more {
+        color: black;
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        margin: 1em 0;
+    }
+    footer {
+        background-color: #202020;
+        color: white;
+        padding: 2em 0;
+        text-align: center;
+    }
+    footer p,
+    footer h4 {
+        margin: 0;
+        font-size: 0.75rem;
+    }
+    footer h4 {
+        font-weight: 700;
+    }
+    footer p {
+        font-weight: 400;
+    }
 }
 
 /* iPads, Tablets */
