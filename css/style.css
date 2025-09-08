@@ -52,7 +52,8 @@ body {
         
     }
     .hero h2,
-    .main-post h2 {
+    .main-post h2,
+    .about-me h2 {
         font-size: 2rem;
         line-height: 1em;
         margin: 0;
@@ -61,13 +62,9 @@ body {
         font-size: 0.75rem;
         font-weight: 400;
     }
-    .hero p,
-    .main-post p {
-        font-size: 1rem;
-        font-weight: 400;
-    }
     .blog-post {
-        padding: 0 1.5em;
+        padding: 2em 1.5em;
+
     }
     article {
         padding-top: 2.5em;
@@ -122,6 +119,11 @@ body {
         height: 250px;
         width: 100%;
         object-fit: cover;
+    }
+    .about-me img {
+        border-radius: 50%;
+        width: 60%;
+        margin-bottom: 1em;
     }
 }
 
