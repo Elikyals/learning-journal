@@ -1,46 +1,58 @@
-html, 
+html,
 body {
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
+    background-color: #FAFAFA;
 }
+
+.container {
+    width: 100%;
+
+}
+nav {
+    background-color: white;
+}
+nav,
+.logo,
+nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5em;
+}
+
+.logo {
+    gap: 0.25em;
+}
+
+.logo-img {
+    width: 30px;
+}
+
+.logo>h1 {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #090909;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+nav ul {
+    gap: 2em;
+}
+
 /* Mobile devices */
-@media (max-width: 480px){
-    .container {
-        width: 100vw;
-        
-    }
-    nav,
-    .logo,
-    nav > ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 0.5em;
-    }
-    .logo {
-        gap: 0.25em;
-    }
-    .logo-img {
-        width: 30px;
-    }
-    .logo > h1 {
-        font-size: 1rem;
-        font-family: "Roboto", sans-serif;
-    }
-    ul li {
-        list-style: none;
-    }
-    li a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #090909;
-        font-size: 0.875rem;
-        font-weight: 600;
-    }
-    nav ul {
-        gap: 2em;
-    }
+@media (max-width: 649px) {
     .hero {
         background-image: url('../images/main-blog-flipped.png');
         height: 250px;
@@ -48,8 +60,12 @@ body {
         background-position: bottom;
         color: white;
         padding: 5em 1em 1em 1em;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
     }
+
     .hero h2,
     .main-post h2,
     .about-me h2 {
@@ -57,35 +73,44 @@ body {
         line-height: 1em;
         margin: 0;
     }
+
     .date {
         font-size: 0.75rem;
         font-weight: 400;
     }
-    .blog-post {
+
+    .blog-post,
+    .about-post,
+    .content-post{
         padding: 2em 1.5em;
 
     }
+
     article {
         padding-top: 2.5em;
         padding-bottom: 0.5em;
     }
+
     article img,
     .recent-post img {
         height: 250px;
         width: 100%;
         object-fit: cover;
     }
+
     article p {
         font-weight: 400;
         font-size: 1rem;
         margin: 0;
     }
+
     article h3 {
         font-size: 1.5rem;
         font-weight: 700;
         margin: 0;
         padding: 0;
     }
+
     .view-more {
         color: black;
         display: block;
@@ -93,20 +118,24 @@ body {
         text-align: center;
         margin: 1em 0;
     }
+
     footer {
         background-color: #202020;
         color: white;
         padding: 2em 0;
         text-align: center;
     }
+
     footer p,
     footer h4 {
         margin: 0;
         font-size: 0.75rem;
     }
+
     footer h4 {
         font-weight: 700;
     }
+
     footer p {
         font-weight: 400;
     }
@@ -117,21 +146,344 @@ body {
         object-fit: cover;
         object-position: 100% 67%;
     }
+
     .about-me img {
         border-radius: 50%;
         width: 60%;
         margin-bottom: 1em;
     }
+    .recent-post>h3 {
+        text-align: center;
+    }
 }
 
 /* iPads, Tablets */
-@media (min-width: 481px) and (max-width: 768px) {}
+@media (min-width: 650px) and (max-width: 768px) {
+    nav {
+        padding: 0 3em;
+    }
+
+    .hero {
+        background-image: url('../images/main-blog-flipped.png');
+        height: 370px;
+        background-size: cover;
+        background-position: 50% 70%;
+        color: white;
+        padding: 0 20em 2em 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .hero h2,
+    .main-post h2,
+    .about-me h2 {
+        font-size: 2.1rem;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .date {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+
+
+    .blog-post {
+        padding: 2em 1.5em;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 400px);
+        grid-gap: 20px;
+        justify-content: center;
+
+    }
+
+    article img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .view-more {
+        color: black;
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    footer {
+        background-color: #202020;
+        color: white;
+        padding: 2em 0;
+        text-align: center;
+    }
+
+    footer p,
+    footer h4 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    footer h4 {
+        font-weight: 700;
+    }
+
+    footer p {
+        font-weight: 400;
+    }
+    .about-me img {
+        border-radius: 50%;
+        width: 20%;
+        margin-bottom: 1em;
+    }
+    .bio {
+        display: flex;
+        gap: 20px;
+        padding: 5em 4em;
+    }
+    .journey-story {
+        padding: 0 5em 0 8em;
+    }
+    .recent-post>h3 {
+        text-align: center;
+    }
+    .recent-post-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-gap: 20px;
+        justify-content: center;
+    }
+    .content-post {
+        padding: 2.5em 5em;
+    }
+    .main-post>img {
+        height: 390px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 100% 70%;
+    }
+}
 
 /* Small screens, laptops*/
-@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        padding: 0 3em;
+    }
+
+    .hero {
+        background-image: url('../images/main-blog-flipped.png');
+        height: 370px;
+        background-size: cover;
+        background-position: 50% 70%;
+        color: white;
+        padding: 0 20em 2em 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .hero h2,
+    .main-post h2,
+    .about-me h2 {
+        font-size: 2.1rem;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .date {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+
+
+    .blog-post {
+        padding: 2em 1.5em;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 400px);
+        grid-gap: 20px;
+        justify-content: center;
+
+    }
+
+    article img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .view-more {
+        color: black;
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    footer {
+        background-color: #202020;
+        color: white;
+        padding: 2em 0;
+        text-align: center;
+    }
+
+    footer p,
+    footer h4 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    footer h4 {
+        font-weight: 700;
+    }
+
+    footer p {
+        font-weight: 400;
+    }
+    .about-me img {
+        border-radius: 50%;
+        width: 20%;
+        margin-bottom: 1em;
+    }
+    .bio {
+        display: flex;
+        gap: 20px;
+        padding: 5em 4em;
+        align-items: center;
+    }
+    .journey-story {
+        padding: 0 5em 0 8em;
+    }
+    .recent-post>h3 {
+        text-align: center;
+    }
+    .recent-post-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-gap: 20px;
+        justify-content: center;
+    }
+    .content-post {
+        padding: 2.5em 5em;
+    }
+    .main-post>img {
+        height: 390px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 100% 70%;
+    }
+
+}
 
 /* Desktops, large screens */
-@media (min-width: 1025px) and (max-width: 1200px) {}
+@media (min-width: 1025px) {
+    nav {
+        padding: 0 3em;
+    }
 
-/* Extra larger screens, TV */
-@media (min-width: 1201px) {}
+    .hero {
+        background-image: url('../images/main-blog-flipped.png');
+        height: 370px;
+        background-size: cover;
+        background-position: 50% 70%;
+        color: white;
+        padding: 0 40em 2em 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .hero h2,
+    .main-post h2,
+    .about-me h2 {
+        font-size: 2.1rem;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .date {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .blog-post {
+        padding: 2em 1.5em;
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, 400px);
+        grid-gap: 20px;
+        justify-content: center;
+
+    }
+
+    article img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .view-more {
+        color: black;
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    footer {
+        background-color: #202020;
+        color: white;
+        padding: 2em 0;
+        text-align: center;
+    }
+
+    footer p,
+    footer h4 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    footer h4 {
+        font-weight: 700;
+    }
+
+    footer p {
+        font-weight: 400;
+    }
+    .about-me img {
+        border-radius: 50%;
+        width: 20%;
+        margin-bottom: 1em;
+    }
+    .bio {
+        display: flex;
+        gap: 20px;
+        padding: 5em 4em;
+        align-items: center;
+    }
+    .journey-story {
+        padding: 0 5em 0 8em;
+    }
+    .recent-post>h3 {
+        text-align: center;
+    }
+    .recent-post-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-gap: 20px;
+        justify-content: center;
+    }
+    .content-post {
+        padding: 2.5em 5em;
+    }
+    .main-post>img {
+        height: 390px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 100% 70%;
+    }
+}
